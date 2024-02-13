@@ -1,0 +1,145 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="cool_makale.master.cs" Inherits="icerik_blog" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr">
+<head runat="server">
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" href="/img/cool_logo_orjina_beyaz.png" type="image/x-icon" />
+    <meta name="content-language" content="tr-TR" />
+    <meta name="description" content="Bilgi Belge Paylasim Ortami Coopcool" />
+    <meta name="author" content="Erkan Daştan,Tuğçe Songül Özkan, Coopcool.com" />
+    <meta name="copyright" content="CoopCool | 2016 | Tüm Hakları Saklıdır." />
+    <meta name="distribution" content="Global" />
+    <meta name="revisit-after" content="1 days" />
+    <meta name="robots" content="index,follow,archive,all" />
+    <meta name="keywords" content="Coopcool,sosyal liseliiblog" />
+    <!-- jQuery Plugins -->
+    <script src="/js/script.js"></script>
+    <script src="/js/jquery.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/jquery.stellar.min.js"></script>
+	<script src="/js/main.js"></script>
+	<title>BilDiyorum</title> 
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Font Awesome Icon -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Custom stlylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/footer.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/png" href="/img/cool_logo_orjina_beyaz.png"/>
+    <style>
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body> 
+
+    <div id="nav" >
+			<!-- Top Nav -->
+			<div id="nav-top">
+				<div class="container">
+				
+					<ul class="nav-social">
+						<li><a href="https://twitter.com/coopcoolturkiye" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/coopcoolsosyalliseli"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/coopcoolturkiye/?hl=tr"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="mailto:coopcoolturkiye@gmail.com"><i class="fa fa-envelope-open-o"></i></a></li>
+					</ul>
+					
+                   
+					<div class="nav-logo">
+                        <img style="width:200px; height:70px;" src="../img/makale_logo.png" />
+					</div>
+					
+				</div>
+			</div>
+            </div> 
+		
+         
+    <form runat="server">
+		
+     <div class="container">
+ <div id='cssmenu'>
+<ul>
+   <li><a href='../ana_sayfa.aspx'>🏠&nbsp;&nbsp;Anasayfa</a></li>
+     <li><a href='../hakkimizda.aspx'>📋&nbsp;&nbsp;Hakkımızda</a></li>
+     <li><a href='../kategori.aspx'>📂&nbsp;&nbsp;Kategoriler</a></li>
+   <li><a href='../icerik_ekle/yazi_ekleme.aspx'> ✒️&nbsp;&nbsp;İçerik Ekle</a>
+   </li>
+   <li><a href='../iletisim.aspx'> ☏&nbsp;İletişim</a></li>
+   <li><a href='../video_pano.aspx'>🎬&nbsp;&nbsp;Video Pano</a></li>
+    <li>
+        <asp:TextBox ID="txt_ara" class="form-control mr-sm-2" runat="server" style="margin-top:10px; height:90%; width:100%;" placeholder="..."></asp:TextBox></li>
+    <li>
+        <asp:Button ID="btn_ara" runat="server" class="btn btn-outline-success my-2 my-sm-0"  Text="Ara"  style="width: 60%; height: 90%; margin-top: 10px; margin-left: 20px; border: none;"/></li>
+
+</ul>
+        
+      </div>
+</div>
+      
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+ <footer class="footer-section">
+        <div class="container" style="height:auto; margin-bottom:0%;">                          
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <div class="fs-about">
+                        <div class="fa-logo">
+                            <a href="#">
+                                <img style="width:300px; height:100px;" src="../img/makale_logo.png" />
+                                <%--<img src="img/logo_ftr.png" alt="">--%>
+                            </a>                       
+                      <ul class="contact-social">
+                           <p> Sosyal Medya Hesaplarımızı Takip Et!</p>
+							<li><a href="https://www.facebook.com/coopcoolturkiye?epa=SEARCH_BOX" class="social-facebook"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="https://twitter.com/CoopcoolTurkiye" class="social-twitter"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/coopcool-t%C3%BCrkiye-0b28b1189/" class="social-twitter"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="https://www.instagram.com/coopcoolturkiye/?hl=tr" class="social-instagram"><i class="fa fa-instagram"></i></a></li>
+						</ul>
+                         
+                        </div>
+                    </div>
+                </div>
+               
+               
+                
+                <div class="col-md-8">
+                    <div class="footer-widget">
+						<h3 class="footer-title" style="color:white;">Popüler Taglar</h3>
+                        <asp:Repeater ID="rpt_tag" runat="server">
+                            <ItemTemplate>
+                                <div style="row" >
+                                    <div class="col-md-3">
+						<div class="tags-widget">
+							<ul>
+								<li style=""><a href="#"><%#Eval("populer_tag") %></a></li>
+								
+							</ul>
+						</div>
+                                        </div>
+                                    </div>
+                                </ItemTemplate>                            
+                            </asp:Repeater>
+					 
+					</div>
+				</div>
+                <div class="col-lg-12">
+                    <div class="copyright-text" style="text-align:start">                       
+                        <p style="color:white;">
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Tüm hakları saklıdır | Website tasarım by  <a href="https://coopcool.com" target="_blank" style="color:white;">Sosyal Liseli</div>
+                                     
+                     </div>
+             
+                   
+            </div>
+    </footer>    
+	<!-- /FOOTER -->
+    </form>
+   
+</body>
+</html>
