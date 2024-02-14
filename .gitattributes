@@ -2,3 +2,4 @@
 * text=auto
 *.csharp linguist-detectable=true
 *.js linguist-detectable=false
+*.css linguist-detectable=false
